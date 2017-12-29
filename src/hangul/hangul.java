@@ -31,7 +31,6 @@ public class hangul {
     private static HashMap<String, Character> simpleConsonantMap = new HashMap<String, Character>();
         
     private static String[] vowels = {"AA", "AE", "AH", "AO", "AW", "AW", "AY", "EH", "ER", "EY", "IH", "IY", "OW", "OY", "UH", "UW", "W"};
- //   private static String[] consonants = {"B", "CH", "D", "DH", "F", "G", "HH", "JH", "K", "L", "M", "N", "NG", "P", "S", "SH", "T", "TH", "V", "W", "Z", "ZH"};
     private static String hangulWord = "";
     
     
@@ -172,32 +171,6 @@ public class hangul {
             
         }
         return 0;
-        /*switch (wordPart) {
-
-        case "EY":
-            return -3;
-            //hangulWord += "ㅔ이";
-            //break;
-        case "IH":
-            return Arrays.binarySearch(medialJaeum, 'ㅣ');
-        case "IY":
-            return Arrays.binarySearch(medialJaeum, 'ㅣ');
-        case "OW":
-            return Arrays.binarySearch(medialJaeum, 'ㅗ'); //consider revising to 오우
-        case "OY":
-            return -4;
-            //hangulWord += "ㅗ이";
-            //break;
-        case "UH":
-            return Arrays.binarySearch(medialJaeum, 'ㅜ');
-        case "UW":
-            return Arrays.binarySearch(medialJaeum, 'ㅜ');
-        case "W":
-            return Arrays.binarySearch(medialJaeum, 'ㅝ');
-        default:
-            return -10;
-        } 
-        */
     }
     
     private static int findConsonent(String wordPart, char[] consList) {
@@ -205,10 +178,6 @@ public class hangul {
             return Arrays.binarySearch(consList, simpleConsonantMap.get(wordPart));
         }
             return 0;
-    }
-    
-    private static int findFirstLetter(int vowelIndex, String wordPart) {
-        return 'a';
     }
     
     private static String assembleWord(String[] wordParts) {
